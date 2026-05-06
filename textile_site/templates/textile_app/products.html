@@ -1,0 +1,359 @@
+{% extends 'textile_app/base.html' %}
+{% load static %}
+
+{% block title %}
+Products | {{ business.name }}
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="bg-dark text-white text-center py-5">
+
+    <div class="container">
+
+        <h1 class="display-4 fw-bold mb-4">
+            Our Textile Products
+        </h1>
+
+        <p class="lead">
+            Premium quality yarn and fabric manufacturing
+            solutions for wholesale buyers across India.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- SEARCH + FILTER -->
+<section class="bg-light py-4">
+
+    <div class="container">
+
+        <form method="GET">
+
+            <div class="row g-3 align-items-center">
+
+                <div class="col-md-5">
+
+                    <input type="text"
+                           name="search"
+                           class="form-control"
+                           placeholder="Search products..."
+                           value="{{ request.GET.search }}">
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <select name="category"
+                            class="form-select">
+
+                        <option value="">
+                            All Categories
+                        </option>
+
+                        {% for category in categories %}
+
+                        <option value="{{ category }}"
+                            {% if request.GET.category == category %}
+                                selected
+                            {% endif %}>
+
+                            {{ category }}
+
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <button class="btn btn-success w-100">
+                        Search Products
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- PRODUCTS -->
+<section>
+
+    <div class="container">
+
+        <div class="row">
+
+            {% for product in products %}
+
+            <div class="col-lg-4 col-md-6 mb-5">
+
+                <div class="card h-100 shadow-sm">
+
+                    <!-- PRODUCT IMAGE -->
+                    <img src="{{ product.image.url }}"
+                         class="card-img-top"
+                         alt="{{ product.name }}">
+
+
+                    <!-- CARD BODY -->
+                    <div class="card-body d-flex flex-column">
+
+                        <!-- CATEGORY -->
+                        <span class="badge bg-success mb-3 w-auto">
+
+                            {{ product.category }}
+
+                        </span>
+
+
+                        <!-- PRODUCT NAME -->
+                        <h4 class="fw-bold mb-3">
+
+                            {{ product.name }}
+
+                        </h4>
+
+
+                        <!-- PRODUCT USAGE -->
+                        <p class="text-muted mb-4">
+
+                            {{ product.usage }}
+
+                        </p>
+
+
+                        <!-- SPECIFICATIONS -->
+                        <div class="mb-4">
+
+                            <p class="mb-2">
+
+                                <strong>Count/GSM:</strong>
+                                {{ product.count_gsm }}
+
+                            </p>
+
+                            <p class="mb-2">
+
+                                <strong>Width:</strong>
+                                {{ product.width }}
+
+                            </p>
+
+                            <p class="mb-2">
+
+                                <strong>MOQ:</strong>
+                                {{ product.moq }}
+
+                            </p>
+
+                            <p class="mb-2">
+
+                                <strong>Colors:</strong>
+                                {{ product.colors }}
+
+                            </p>
+
+                            <p class="mb-2">
+
+                                <strong>Packaging:</strong>
+                                {{ product.packaging }}
+
+                            </p>
+
+                            <p class="mb-2">
+
+                                <strong>Delivery:</strong>
+                                {{ product.delivery_time }}
+
+                            </p>
+
+                        </div>
+
+
+                        <!-- BUTTONS -->
+                        <div class="mt-auto">
+
+                            <a href="/product/{{ product.id }}/"
+                               class="btn btn-success w-100 mb-2">
+
+                                View Details
+
+                            </a>
+
+
+                            <a href="https://wa.me/{{ business.phone }}"
+                               class="btn btn-outline-success w-100"
+                               target="_blank">
+
+                                WhatsApp Enquiry
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="col-12 text-center">
+
+                <h4>No Products Found</h4>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- WHY BUY FROM US -->
+<section class="bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Why Buyers Choose Us
+            </h2>
+
+            <p class="section-description">
+
+                Trusted textile manufacturing partner
+                for wholesale supply.
+
+            </p>
+
+        </div>
+
+        <div class="row text-center">
+
+            <div class="col-md-3 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+                        Factory Direct Pricing
+                    </h5>
+
+                    <p>
+                        Competitive wholesale pricing
+                        without middlemen.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+                        Quality Manufacturing
+                    </h5>
+
+                    <p>
+                        Strict quality control process
+                        before dispatch.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+                        Bulk Order Support
+                    </h5>
+
+                    <p>
+                        Large-scale production capability
+                        for B2B buyers.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+                        Pan India Delivery
+                    </h5>
+
+                    <p>
+                        Reliable logistics and
+                        timely order dispatch.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- CTA SECTION -->
+<section class="cta-section text-center">
+
+    <div class="container">
+
+        <h2 class="mb-4">
+
+            Need Custom Textile Requirements?
+
+        </h2>
+
+        <p class="mb-5">
+
+            Contact us today for wholesale pricing,
+            custom specifications, and bulk orders.
+
+        </p>
+
+        <a href="/contact/"
+           class="btn btn-success btn-lg px-5">
+
+            Send Enquiry
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

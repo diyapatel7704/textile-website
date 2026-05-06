@@ -1,0 +1,580 @@
+{% extends 'textile_app/base.html' %}
+{% load static %}
+
+{% block title %}
+About Us | {{ business.name }}
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="bg-dark text-white text-center py-5">
+
+    <div class="container">
+
+        <h1 class="display-4 fw-bold mb-4">
+
+            About {{ business.name }}
+
+        </h1>
+
+        <p class="lead">
+
+            Trusted textile manufacturing company
+            delivering premium quality fabric and yarn solutions.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- COMPANY INTRO -->
+<section>
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <!-- IMAGE -->
+            <div class="col-lg-6 mb-5">
+
+                <img src="{% static 'images/factory.png' %}"
+                     class="img-fluid rounded shadow w-100"
+                     alt="Factory Image">
+
+            </div>
+
+
+            <!-- CONTENT -->
+            <div class="col-lg-6">
+
+                <h2 class="section-title mb-4">
+
+                    Trusted Textile Manufacturing Company
+
+                </h2>
+
+                <p class="section-description mb-3">
+
+                    {{ business.about_company }}
+
+                </p>
+
+                <p class="section-description mb-3">
+
+                    We specialize in wholesale textile manufacturing
+                    and supply premium fabric and yarn products
+                    to garment industries, textile traders,
+                    exporters, and industrial buyers.
+
+                </p>
+
+                <p class="section-description mb-4">
+
+                    With modern infrastructure, experienced workforce,
+                    and strict quality control systems,
+                    we ensure reliable production and timely delivery.
+
+                </p>
+
+                <a href="/contact/"
+                   class="btn btn-success">
+
+                    Contact Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- COMPANY STATS -->
+<section class="bg-light">
+
+    <div class="container">
+
+        <div class="row text-center">
+
+            <div class="col-md-3 mb-4">
+
+                <div class="stats-box h-100">
+
+                    <h2>
+
+                        {{ business.years_experience }}
+
+                    </h2>
+
+                    <p>
+
+                        Years Experience
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="stats-box h-100">
+
+                    <h2>
+
+                        {{ business.happy_clients }}
+
+                    </h2>
+
+                    <p>
+
+                        Happy Clients
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="stats-box h-100">
+
+                    <h2>
+
+                        {{ business.monthly_production }}
+
+                    </h2>
+
+                    <p>
+
+                        Monthly Production
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="stats-box h-100">
+
+                    <h2>
+
+                        {{ business.delivery_area }}
+
+                    </h2>
+
+                    <p>
+
+                        Delivery Coverage
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- MISSION & VISION -->
+<section>
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- MISSION -->
+            <div class="col-md-6 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h3 class="fw-bold mb-4">
+
+                        Our Mission
+
+                    </h3>
+
+                    <p>
+
+                        To deliver premium quality textile products
+                        with competitive pricing, reliable manufacturing,
+                        and timely delivery for wholesale buyers.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- VISION -->
+            <div class="col-md-6 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h3 class="fw-bold mb-4">
+
+                        Our Vision
+
+                    </h3>
+
+                    <p>
+
+                        To become a trusted textile manufacturing brand
+                        recognized for quality, innovation,
+                        and long-term business relationships.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- INFRASTRUCTURE -->
+<section class="bg-light">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <!-- CONTENT -->
+            <div class="col-lg-6 mb-5">
+
+                <h2 class="section-title mb-4">
+
+                    Modern Textile Infrastructure
+
+                </h2>
+
+                <p class="section-description mb-4">
+
+                    Our manufacturing facility is equipped
+                    with advanced textile machinery
+                    capable of handling bulk production
+                    efficiently and consistently.
+
+                </p>
+
+                <ul class="list-group list-group-flush">
+
+                    <li class="list-group-item">
+
+                        ✔ Advanced textile machinery
+
+                    </li>
+
+                    <li class="list-group-item">
+
+                        ✔ Skilled workforce
+
+                    </li>
+
+                    <li class="list-group-item">
+
+                        ✔ Quality inspection systems
+
+                    </li>
+
+                    <li class="list-group-item">
+
+                        ✔ Large-scale production support
+
+                    </li>
+
+                    <li class="list-group-item">
+
+                        ✔ Timely dispatch and logistics
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- IMAGE -->
+            <div class="col-lg-6">
+
+                <img src="{% static 'images/factory2.png' %}"
+                     class="img-fluid rounded shadow w-100"
+                     alt="Infrastructure">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- WHY CHOOSE US -->
+<section>
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+
+                Why Choose Us
+
+            </h2>
+
+            <p class="section-description">
+
+                Trusted textile manufacturing partner
+                for wholesale and industrial buyers.
+
+            </p>
+
+        </div>
+
+        <div class="row text-center">
+
+            {% for item in why_choose %}
+
+            <div class="col-md-3 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+
+                        {{ item.title }}
+
+                    </h5>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- INDUSTRIES WE SERVE -->
+<section class="bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+
+                Industries We Serve
+
+            </h2>
+
+            <p class="section-description">
+
+                Reliable textile supply solutions
+                for multiple industries.
+
+            </p>
+
+        </div>
+
+        <div class="row text-center">
+
+            <div class="col-md-3 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+
+                        Garment Industry
+
+                    </h5>
+
+                    <p>
+
+                        Fabric solutions for apparel manufacturing.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+
+                        Textile Traders
+
+                    </h5>
+
+                    <p>
+
+                        Bulk textile supply for distributors.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+
+                        Export Houses
+
+                    </h5>
+
+                    <p>
+
+                        Export-quality textile manufacturing support.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+
+                        Uniform Manufacturers
+
+                    </h5>
+
+                    <p>
+
+                        Durable textile materials for uniforms.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- TESTIMONIAL -->
+<!-- TESTIMONIAL -->
+<section>
+
+    <div class="container text-center">
+
+        <h2 class="section-title mb-5">
+
+            What Our Clients Say
+
+        </h2>
+
+        <div class="row justify-content-center">
+
+            {% for testimonial in testimonials %}
+
+            <div class="col-lg-4 mb-4">
+
+                <div class="testimonial-box h-100">
+
+                    <p class="mb-4">
+
+                        "{{ testimonial.review }}"
+
+                    </p>
+
+                    <h5>
+
+                        {{ testimonial.client_name }}
+
+                    </h5>
+
+                    <p class="text-muted">
+
+                        {{ testimonial.company_name }}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    
+</section>
+
+
+
+<!-- FINAL CTA -->
+<section class="cta-section text-center">
+
+    <div class="container">
+
+        <h2 class="mb-4">
+
+            Looking for Reliable Textile Manufacturing?
+
+        </h2>
+
+        <p class="mb-5">
+
+            Contact us today for wholesale pricing,
+            bulk manufacturing, and custom textile solutions.
+
+        </p>
+
+        <a href="/contact/"
+           class="btn btn-success btn-lg px-5">
+
+            Send Enquiry
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

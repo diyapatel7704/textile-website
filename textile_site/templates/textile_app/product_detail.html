@@ -1,0 +1,544 @@
+{% extends 'textile_app/base.html' %}
+{% load static %}
+
+{% block title %}
+{{ product.name }} | {{ business.name }}
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="bg-dark text-white text-center py-5">
+
+    <div class="container">
+
+        <h1 class="display-4 fw-bold mb-3">
+
+            {{ product.name }}
+
+        </h1>
+
+        <p class="lead">
+
+            Premium quality textile product for wholesale buyers.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- PRODUCT DETAILS -->
+<section>
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <!-- PRODUCT IMAGE -->
+            <div class="col-lg-6 mb-5">
+
+                <img src="{{ product.image.url }}"
+                     class="img-fluid rounded shadow w-100"
+                     alt="{{ product.name }}">
+
+            </div>
+
+
+            <!-- PRODUCT INFO -->
+            <div class="col-lg-6">
+
+                <!-- CATEGORY -->
+                <span class="badge bg-success mb-3">
+
+                    {{ product.category }}
+
+                </span>
+
+
+                <!-- PRODUCT NAME -->
+                <h2 class="fw-bold mb-4">
+
+                    {{ product.name }}
+
+                </h2>
+
+
+                <!-- PRODUCT DESCRIPTION -->
+                <p class="text-muted mb-4">
+
+                    {{ product.usage }}
+
+                </p>
+
+
+                <!-- TECHNICAL SPECIFICATIONS -->
+                <div class="card border-0 shadow-sm mb-4">
+
+                    <div class="card-body">
+
+                        <h4 class="fw-bold mb-4">
+
+                            Product Specifications
+
+                        </h4>
+
+                        <table class="table">
+
+                            <tr>
+                                <th>Category</th>
+                                <td>{{ product.category }}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Count / GSM</th>
+                                <td>{{ product.count_gsm }}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Width</th>
+                                <td>{{ product.width }}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Colors</th>
+                                <td>{{ product.colors }}</td>
+                            </tr>
+
+                            <tr>
+                                <th>MOQ</th>
+                                <td>{{ product.moq }}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Packaging</th>
+                                <td>{{ product.packaging }}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Delivery Time</th>
+                                <td>{{ product.delivery_time }}</td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CTA BUTTONS -->
+                <div class="d-grid gap-3 d-md-flex">
+
+                    <a href="https://wa.me/{{ business.phone }}"
+                       target="_blank"
+                       class="btn btn-success btn-lg px-4">
+
+                        WhatsApp Now
+
+                    </a>
+
+                    <a href="#enquiry-form"
+                       class="btn btn-outline-dark btn-lg px-4">
+
+                        Send Enquiry
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PRODUCT FEATURES -->
+<section class="bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+
+                Product Advantages
+
+            </h2>
+
+            <p class="section-description">
+
+                High-quality textile manufacturing
+                with reliable production standards.
+
+            </p>
+
+        </div>
+
+        <div class="row text-center">
+
+            <div class="col-md-3 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+
+                        Premium Quality
+
+                    </h5>
+
+                    <p>
+
+                        Manufactured using high-grade raw materials.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+
+                        Bulk Production
+
+                    </h5>
+
+                    <p>
+
+                        Large-scale manufacturing capability.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+
+                        Quality Checked
+
+                    </h5>
+
+                    <p>
+
+                        Strict inspection before dispatch.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+
+                        Timely Delivery
+
+                    </h5>
+
+                    <p>
+
+                        Reliable logistics support across India.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- APPLICATIONS -->
+<section>
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+
+                Product Applications
+
+            </h2>
+
+            <p class="section-description">
+
+                Suitable for multiple industrial
+                and textile applications.
+
+            </p>
+
+        </div>
+
+        <div class="row text-center">
+
+            <div class="col-md-4 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+
+                        Garment Industry
+
+                    </h5>
+
+                    <p>
+
+                        Ideal for apparel and clothing manufacturing.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+
+                        Textile Traders
+
+                    </h5>
+
+                    <p>
+
+                        Suitable for wholesale textile distribution.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <div class="feature-box h-100">
+
+                    <h5>
+
+                        Export Houses
+
+                    </h5>
+
+                    <p>
+
+                        Reliable quality for export textile requirements.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ENQUIRY FORM -->
+<section class="bg-light"
+         id="enquiry-form">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="card border-0 shadow">
+
+                    <div class="card-body p-5">
+
+                        <div class="text-center mb-5">
+
+                            <h2 class="fw-bold">
+
+                                Send Product Enquiry
+
+                            </h2>
+
+                            <p class="text-muted">
+
+                                Contact us for wholesale pricing,
+                                bulk orders, and custom requirements.
+
+                            </p>
+
+                        </div>
+
+
+                        <!-- SUCCESS MESSAGE -->
+                        {% if messages %}
+
+                            {% for message in messages %}
+
+                            <div class="alert alert-success">
+
+                                {{ message }}
+
+                            </div>
+
+                            {% endfor %}
+
+                        {% endif %}
+
+
+                        <!-- FORM -->
+                        <form method="POST">
+
+                            {% csrf_token %}
+
+                            <div class="row">
+
+                                <!-- NAME -->
+                                <div class="col-md-6 mb-4">
+
+                                    <label class="form-label">
+
+                                        Full Name
+
+                                    </label>
+
+                                    <input type="text"
+                                           name="name"
+                                           class="form-control"
+                                           required>
+
+                                </div>
+
+
+                                <!-- PHONE -->
+                                <div class="col-md-6 mb-4">
+
+                                    <label class="form-label">
+
+                                        Phone Number
+
+                                    </label>
+
+                                    <input type="text"
+                                           name="phone"
+                                           class="form-control"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- QUANTITY -->
+                            <div class="mb-4">
+
+                                <label class="form-label">
+
+                                    Required Quantity
+
+                                </label>
+
+                                <input type="text"
+                                       name="quantity"
+                                       class="form-control"
+                                       placeholder="Example: 500 KG">
+
+                            </div>
+
+
+                            <!-- MESSAGE -->
+                            <div class="mb-4">
+
+                                <label class="form-label">
+
+                                    Requirement Details
+
+                                </label>
+
+                                <textarea name="message"
+                                          rows="5"
+                                          class="form-control"
+                                          placeholder="Enter your detailed requirement"></textarea>
+
+                            </div>
+
+
+                            <!-- BUTTON -->
+                            <button type="submit"
+                                    class="btn btn-success btn-lg w-100">
+
+                                Submit Enquiry
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FINAL CTA -->
+<section class="cta-section text-center">
+
+    <div class="container">
+
+        <h2 class="mb-4">
+
+            Looking for Bulk Textile Supply?
+
+        </h2>
+
+        <p class="mb-5">
+
+            We provide premium textile manufacturing
+            solutions for wholesalers and industrial buyers.
+
+        </p>
+
+        <a href="/contact/"
+           class="btn btn-success btn-lg px-5">
+
+            Contact Us
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

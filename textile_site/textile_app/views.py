@@ -22,7 +22,7 @@ def home(request):
 
     testimonials = Testimonial.objects.all()[:3]
 
-    return render(request, 'textile_app/home.html', {
+    return render(request, 'textile_app/Home.html', {
         'business': business,
         'products': products,
         'why_choose': why_choose,
